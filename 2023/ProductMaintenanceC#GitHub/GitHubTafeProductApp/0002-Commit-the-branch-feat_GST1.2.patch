@@ -1,0 +1,98 @@
+From 5b89079bccd16f8d8bb61c06dc5970226db1bd21 Mon Sep 17 00:00:00 2001
+From: 001192251 <wyatt.coff@student.tafesa.edu.au>
+Date: Fri, 15 Sep 2023 11:17:35 +0930
+Subject: [PATCH 2/2] Commit the branch feat_GST1.2
+
+---
+ ProductMaintenance/ProductApps/MainWindow.xaml | 16 +++++++++++-----
+ .../ProductApps/MainWindow.xaml.cs             | 18 ++++++++++++------
+ 2 files changed, 23 insertions(+), 11 deletions(-)
+
+diff --git a/ProductMaintenance/ProductApps/MainWindow.xaml b/ProductMaintenance/ProductApps/MainWindow.xaml
+index 0b647ce..cca11c4 100644
+--- a/ProductMaintenance/ProductApps/MainWindow.xaml
++++ b/ProductMaintenance/ProductApps/MainWindow.xaml
+@@ -3,6 +3,10 @@
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Title="MainWindow" Height="350" Width="525">
+     <Grid>
++        <Grid.RowDefinitions>
++            <RowDefinition Height="145*"/>
++            <RowDefinition Height="22*"/>
++        </Grid.RowDefinitions>
+         <Label Content="Product:" HorizontalAlignment="Left" Height="30" Margin="46,37,0,0" VerticalAlignment="Top" Width="61"/>
+         <Label Content="Price $:" HorizontalAlignment="Left" Height="30" Margin="46,78,0,0" VerticalAlignment="Top" Width="61"/>
+         <Label Content="Quantity:" HorizontalAlignment="Left" Height="30" Margin="48,113,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.371,0.498"/>
+@@ -12,12 +16,14 @@
+         <TextBox Name="priceTextBox" HorizontalAlignment="Left" Height="24" Margin="122,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
+         <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Height="24" Margin="122,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
+         <Button Name="calculateButton" Content="_Calculate" HorizontalAlignment="Left" Height="37" Margin="327,152,0,0" VerticalAlignment="Top" Width="122" Click="calculateButton_Click"/>
+-        <TextBlock x:Name="totalChargeTextBox" HorizontalAlignment="Left" Margin="46,209,0,54" Width="142" Height="NaN"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the delivery charge ($25):"/></TextBlock>
+-        <TextBox x:Name="totalChargeTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
++        <TextBlock x:Name="totalChargeTextBox" HorizontalAlignment="Left" Margin="46,197,0,22" Width="142" Height="NaN"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the delivery charge ($25):"/></TextBlock>
++        <TextBox x:Name="totalChargeTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
+         <Button Name="clearButton" Content="C_lear" HorizontalAlignment="Left" Height="34" Margin="327,209,0,0" VerticalAlignment="Top" Width="122" Click="clearButton_Click"/>
+-        <Button Name="closeButton" Content="Cl_ose" HorizontalAlignment="Left" Height="34" Margin="327,264,0,0" VerticalAlignment="Top" Width="122" Click="closeButton_Click"/>
+-        <TextBlock x:Name="totalChargeafterwrap" HorizontalAlignment="Left" Margin="46,258,0,10" Width="142" Height="NaN"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the "/><Run Text="wrap charge"/><Run Text=" ($5):"/></TextBlock>
+-        <TextBox x:Name="totalChargeWithWrapTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
++        <Button Name="closeButton" Content="Cl_ose" HorizontalAlignment="Left" Height="34" Margin="327,264,0,0" VerticalAlignment="Top" Width="122" Click="closeButton_Click" Grid.RowSpan="2"/>
++        <TextBlock x:Name="totalChargeafterwrap" HorizontalAlignment="Left" Margin="46,240,0,28" Width="142" Height="NaN" Grid.RowSpan="2"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the "/><Run Text="wrap charge"/><Run Text=" ($5):"/></TextBlock>
++        <TextBox x:Name="totalChargeWithWrapTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
++        <TextBlock x:Name="totalChargeafterGST" HorizontalAlignment="Left" Margin="26,281,0,-13" Width="162" Height="NaN" Grid.RowSpan="2"><Run Language="en-au" Text="Total Charge After GST @ 10%"/></TextBlock>
++        <TextBox x:Name="totalChargeWithGSTTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True" Grid.RowSpan="2"/>
+ 
+ 
+ 
+diff --git a/ProductMaintenance/ProductApps/MainWindow.xaml.cs b/ProductMaintenance/ProductApps/MainWindow.xaml.cs
+index a0b7228..f066171 100644
+--- a/ProductMaintenance/ProductApps/MainWindow.xaml.cs
++++ b/ProductMaintenance/ProductApps/MainWindow.xaml.cs
+@@ -21,8 +21,9 @@ namespace ProductApps
+     public partial class MainWindow : Window
+     {
+         Product cProduct;
+-        decimal deliveryCharge = 25.00M; // Existing Delivery charge
+-        decimal wrappingCharge = 5.00M;  // New: Wrapping charge
++        decimal deliveryCharge = 25.00M;  // Existing Delivery charge
++        decimal wrappingCharge = 5.00M;   // Existing Wrapping charge
++        decimal gstRate = 1.1M;           // New: GST rate
+ 
+         public MainWindow()
+         {
+@@ -41,9 +42,13 @@ namespace ProductApps
+                 decimal totalCharge = cProduct.TotalPayment + deliveryCharge;
+                 totalChargeTextBlock.Text = Convert.ToString(totalCharge);
+ 
+-                // New: Calculate and display Total Charge after adding the wrapping charge
++                // Calculate and display Total Charge after adding the wrapping charge
+                 decimal totalChargeWithWrap = cProduct.TotalPayment + deliveryCharge + wrappingCharge;
+                 totalChargeWithWrapTextBlock.Text = Convert.ToString(totalChargeWithWrap);
++
++                // New: Calculate and display Total Charge after GST
++                decimal totalChargeWithGST = totalChargeWithWrap * gstRate;
++                totalChargeWithGSTTextBlock.Text = Convert.ToString(totalChargeWithGST);
+             }
+             catch (FormatException)
+             {
+@@ -57,8 +62,9 @@ namespace ProductApps
+             priceTextBox.Text = "";
+             quantityTextBox.Text = "";
+             totalPaymentTextBlock.Text = "";
+-            totalChargeTextBlock.Text = ""; // Clear the existing TextBlock
+-            totalChargeWithWrapTextBlock.Text = ""; // New: Clear the new TextBlock as well
++            totalChargeTextBlock.Text = "";
++            totalChargeWithWrapTextBlock.Text = "";
++            totalChargeWithGSTTextBlock.Text = ""; // New: Clear the GST TextBlock as well
+         }
+ 
+         private void closeButton_Click(object sender, RoutedEventArgs e)
+@@ -66,4 +72,4 @@ namespace ProductApps
+             this.Close();
+         }
+     }
+-}
+\ No newline at end of file
++}
+-- 
+2.41.0.windows.3
+

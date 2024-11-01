@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css_style_sheet.css">
+    <title>Order Form Validator</title>
+    <script src="./js/field_verification.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="return validateForm()">
+            <div>
+                <p class="customer_detail_header_text"><b>Customer Details</b></p>
+            </div>
+            <div class="customer_details_table_container">
+                <p class="customer_details_table_main_bar">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="firstName" size="20" placeholder="Your First Name Here" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <span class = "alertText" id="firstNameAlertText"></span>
+                    <br>
+
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Your Last Name Here" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <span class = "alertText" id="lastNameAlertText"></span>
+                    <br>
+
+                    <label>Email</label>
+                    <input type="text" id="email" name="email" size="20" placeholder="Your Email Here" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <span class = "alertText" id="emailAlertText"></span>
+                    <br>
+
+                    <label>Postcode</label>
+                    <input type="text" id="postcode" name="postcode" size="20" placeholder="Your Postcode Here" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <span class = "alertText" id="postcodeAlertText"></span>
+                    <br>
+                </p>
+            </div>
+            <div class="payment_infomation_table_containter">
+                <p class="payment_infomation_header_text"><b>Payment details</b></p>
+                <p class="payment_infomation_table_main_bar">
+                    Credit card
+                    <select id="myDropDown">
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                    </select>
+                    <br>
+                    Card number
+                    <input type="text" id="cardNumber" name="cardNumber" size="20" placeholder="Enter your card number here" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <span class = "alertText" id="creditCardAlertText"></span>
+                    <br>
+                    CCV
+                    <input type="text" id="ccv" name="ccv" size="20" placeholder="Enter your CCV here" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                    <span class = "alertText" id="ccvAlertText"></span>
+                    <br>
+                    Expiry MM/YY
+                    <select id="expiryMonth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <span class="slash">/</span>
+                    <select id="expiryYear">
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                    <span class = "alertText" id="expiryDateAlertText"></span>
+                </p>
+            </div>
+            <div class="buttons_bottom_of_screen">
+                <div class="button_container">
+                    <button class="bottom_button_eliments" type="submit">Submit</button>
+                    <button class="bottom_button_eliments" onclick="openHelpPage()">Help</button>
+                </div>
+            </div>
+        </form>
+        <br>    
+        <div class="go_to_other_website_wrap">
+            <button id="myButton" onclick="openWebsite()">Go to Other Websites</button>
+        </div>
+    </div>
+</body>
+</html>

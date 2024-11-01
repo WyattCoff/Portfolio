@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Portfolio\\Portfolio\\2023\\UniversalCalculator\\TafeProductApp\\ProductMaintenance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{46FA31E3-20AC-4055-A0DC-87855C4DDD51}|ProductApps\\ProductApps.csproj|c:\\portfolio\\portfolio\\2023\\universalcalculator\\tafeproductapp\\productmaintenance\\productapps\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FA31E3-20AC-4055-A0DC-87855C4DDD51}|ProductApps\\ProductApps.csproj|solutionrelative:productapps\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Portfolio\\Portfolio\\2023\\UniversalCalculator\\TafeProductApp\\ProductMaintenance\\ProductApps\\Product.cs",
+              "RelativeDocumentMoniker": "ProductApps\\Product.cs",
+              "ToolTip": "C:\\Portfolio\\Portfolio\\2023\\UniversalCalculator\\TafeProductApp\\ProductMaintenance\\ProductApps\\Product.cs",
+              "RelativeToolTip": "ProductApps\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T08:39:28.571Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

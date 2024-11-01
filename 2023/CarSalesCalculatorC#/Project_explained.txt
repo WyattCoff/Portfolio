@@ -1,0 +1,1 @@
+This project was created at TafeSA under the 'ICTPRG437 - Building a user interface' course. This application acts as a car sales calculator for the fictional company 'Dodge Brothers'. The application calculates a customers Sub Amout, GST Amout and Final Amount. This is then displayed on the screen once completed.

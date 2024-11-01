@@ -1,0 +1,1 @@
+This project was created at TafeSA under the 'ICTICT449 - Use version control systems in development environments' course. This is a simple application that calculates the priece of a product then adds $25 GST to the final price. This application was pushed to github. Attached will be a document explaining the development cycle of this application.

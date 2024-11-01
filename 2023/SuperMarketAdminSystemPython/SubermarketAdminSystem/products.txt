@@ -1,0 +1,3 @@
+123,Milk 2 Litres,3.50
+456,Bread 1 Loaf,2.25
+789,Eggs 1 Dozen,2.99

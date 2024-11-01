@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+/* CSS Document */ 
+
+.container {
+
+	width:100%;
+	min-width:auto;
+    margin:0%;
+	height: 253em;
+	background-color: #2A447F;
+	
+	
+
+}
+
+
+ 
+
+header {
+
+	background-color: lightgrey;
+	width:100%;
+	height:60px;
+	font-size:50px;
+	text-align: left;
+	border: outset;
+	border-color: white;
+	border-bottom-style: solid;
+	border-bottom-width: thick;
+
+               
+
+}
+
+ 
+
+nav {
+
+	width:20%;
+	height: 168.75em;
+	float:left;
+	background-color: #2A447F;
+	
+}
+
+ 
+
+section {
+
+	width:80%;
+	height:135em;
+    float:left;
+	font-size:20px;
+	text-align:center;
+	background-color: #2A447F;
+}
+
+ 
+
+.The_heading_container {
+
+	background-color:#FFFFFF;
+	width:100%;
+	height:75px;
+	font-size:50px;
+	text-align: left;
+}
+
+.Jimmy_Carr_Name_Left
+
+{
+
+	margin-top: 0%;
+	margin-bottom:30%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	color: #1D3365
+	
+
+}
+
+ a {
+
+  color: #FD02E5;
+
+}
+
+ 
+a:visited {
+
+    color: #C97677;
+
+}
+
+ 
+
+a:hover, a:active, a:focus {
+
+    color:#49fc00;
+
+}
+
+.Home_Bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	color: blue;
+	
+
+}
+ 
+
+.Biography_Bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+}
+
+.Discography_bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	
+}
+
+.Media_Bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+}
+
+p{
+	
+	font-size: 1.5vw; 
+	height: auto;
+	max-width: 100%;
+	margin: auto;
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	text-align: left;
+	
+	
+	
+}
+
+p.Main_page_Jimmy_Carr_Paragraph:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+	
+	
+	
+}
+.JimmyCarr_DVD_front_page_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+}
+
+.JimmyCarr_DVD_spans {
+	padding: .2em;
+	width: 45%;
+
+	
+}
+
+.DVD_Images_adjustments {
+	width: 70%;
+    height: auto;
+
+}
+
+
+.Nav_Images {
+	
+	width: 90%;
+	height: auto;
+	float: left;
+}
+
+.JimmyCarr_Main_Front_Image_Terribly_Funny {
+	
+	float: left;
+	width: 100%;
+	max-width: inherit;
+	height: auto;
+	
+	
+	
+}
+
+.JimmyCarr_Main_Front_Image_Terribly_Funny_Border {
+	
+	width: 100%;
+}
+
+p.Extra_JimmyCarr_Text:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+}
+
+p.Main_page_Jimmy_Carr_Paragraph:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+	
+}
+
+
+.Nav_Images {
+	
+	width: 90%;
+	height: auto;
+	float: left;
+}
+
+.Biography_page_main_image_JimmyCarr_preforming {
+	
+	float: left;
+	width: 100%;
+	max-width: inherit;
+	height: auto;
+}
+
+.Biography_main_text_Header {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	
+}
+
+p.Biography_main_text_Early_Carrer:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+}
+
+.JimmyCarr_list_container {
+	background-color: black;
+	display: inline-block;
+	padding: 0em;
+	margin-top: -1.5em;
+	
+}
+
+.cented_list {
+
+	color: lightgreen;
+	text-align: left;
+	list-style-type: lower-alpha;
+	margin: 0;
+	font-size: 1vw;
+	border:solid #FFAE00;
+	border-style: solid;
+	border-width: 0.2em;
+	
+	
+	
+	
+}
+
+li {
+  margin-bottom: 0.625em;
+}
+
+p.Main_page_Jimmy_Carr_Paragraph:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+}
+
+.comady_specials_main_text {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	
+}
+
+.discograpgy_table_container{
+	
+	font-size: 1vw; 
+	height: auto;
+	max-width: 60em;
+	margin: auto;
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	text-align: left;
+	
+}
+
+.table_changes {
+	
+	color:#000000;
+	background-color: #000000;
+	
+}
+.collom_discriptions {
+	
+	background: #C9AF00;
+	font-size: 1vw; 
+	height: auto;
+	max-width: 100%;
+	margin: auto;
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	text-align: left;
+	
+}
+
+.Table_infomation_colloms{
+	
+	background: #E5BBBB;
+	font-size: 1em;
+	width: 50%;
+	
+}
+
+.table_images{
+	
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.Cover_length_changes {
+	
+	padding: 2px;
+	width: 20%;
+	height: auto;
+	
+}
+
+td {
+	text-align: center;
+	width: auto;
+}
+
+.media_main_video {
+	
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	
+}
+
+.media_main_text {
+	
+	text-align: center;
+	
+}
+
+p.media_main_text:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+}
+
+.social_media_breaf_bar {
+	
+	margin: 2em;
+	text-align: center;
+	border:solid black;
+	border-style: solid;
+	border-width: 0.2em;
+}
+
+.social_media_breaf_bar_container {
+	
+	background-color: inherit;
+	display: inline-block;
+	padding: 0em;
+	margin-top: 0;
+	
+}
+
+.social_media_images_container {
+	
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: auto;
+	padding: 0em;
+	margin-top: 0em;
+}
+
+.Twitter_icon_changes {
+	
+	padding: 1em;
+	max-width: 10%;
+	transform: rotate(350deg);
+	transform: skewY(350deg);
+}
+
+.Instagram_icon_changes {
+	
+	margin: 0em;
+	max-width: 10%;
+	transform: rotate(10deg);
+	transform: skewY(10deg);
+}
+
+.Facebook_icon_changes {
+	
+	padding: 1em;
+	margin: 0em;
+	max-width: 10%;
+	transform: rotate(350deg);
+	transform: skewY(350deg);
+}

@@ -1,0 +1,152 @@
+.container {
+
+	width:100%;
+	min-width:auto;
+    margin:0%;
+	height: 100em;
+	background-color: #2A447F;
+    font-size: 1.5vw;
+}
+
+
+.customer_details_table_container{
+
+    background-color: inherit;
+	display: inline-block;
+	padding: 0em;
+	margin-top: 0em;
+	border:solid black;
+	border-style: solid;
+	border-width: 0.2em;
+
+}
+
+p.customer_detail_header_text {
+
+	text-align: left;
+	color: rgb(255, 221, 30);
+
+
+}
+
+.alertText {
+
+	font-size: 1vw;
+
+}
+
+.customer_details_table_main_bar {
+
+    margin: 0.2em;
+    width: 64em;
+	text-align: center;
+    text-align: left;
+    
+}
+
+
+p.customer_details_table_main_bar {
+
+	line-height: 1.7em;
+
+}
+
+.payment_infomation_table_containter {
+
+    background-color: inherit;
+	display: inline-block;
+	padding: 0em;
+	margin-top: 0em;
+
+}
+
+p.payment_infomation_header_text {
+
+    text-align: left;
+	color: rgb(255, 221, 30);
+
+}
+
+.payment_infomation_table_main_bar{
+
+    margin: 0.2em;
+    width: 64em;
+	text-align: center;
+	border:solid black;
+	border-style: solid;
+	border-width: 0.2em;
+    text-align: left;
+
+}
+
+p.payment_infomation_table_main_bar {
+
+    line-height: 1.7em;
+
+}
+
+.buttons_bottom_of_screen {
+
+	margin-left: 2.5vw;
+
+}
+
+
+.bottom_button_eliments {
+
+    background-color: #ffffff; 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    margin: 0.3em;
+    cursor: pointer;
+
+}
+
+.go_to_other_website_wrap {
+
+	width: 5em;
+	margin-left: 2em;
+
+}
+
+.help_container {
+
+	width: 100%;
+	min-width:auto;
+    margin:0%;
+	height: 53em;
+	min-width:auto;
+	background-color: #2A447F;
+    font-size: 1.5vw;
+
+}
+
+h1.help_header_text {
+
+text-align: center;
+font-size: 6vw;
+color: rgb(255, 221, 30);
+
+
+}
+
+p.help_section_text {
+
+	text-align: center;
+	font-size: 3vw;
+	font-family: 'Lato', sans-serif;
+
+}
+
+.help_section_text_container {
+
+	border:solid black;
+	border-style: solid;
+	border-width: 0.4em;
+
+}

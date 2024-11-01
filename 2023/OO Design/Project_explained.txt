@@ -1,0 +1,1 @@
+This project was created at TafeSA under the 'ICTPRG411 - Apply skills in object- oriented design' course. This course was all about OO Design and creating Diagrams. I will attach these diagarms aswell as there respective documentaion.

@@ -1,0 +1,11 @@
+This project was created at TafeSA under the 'ICTPRG443 Apply intermediate programming skills in different languages' course. This project is a console application coded in python. This application offers allows a admin to do the following:
+
+a.	Add Products to Database
+b.	List all Products in Database (Ascending order of Product bar-code)
+c.	Find a Product in the Database, based on Product Bar-Code
+d.	List All Transactions (Ascending order of date of transaction)
+e.	Display a Bar chart of Products sold by quantity
+f.	Display an Excel report of all transactions.
+g.	Exit
+
+A binary file is used to confirm a users credentials, prevoiously a text file was used. This assesment also implaments sorting a searching algorithms.Attached will be the Assesment documentation.

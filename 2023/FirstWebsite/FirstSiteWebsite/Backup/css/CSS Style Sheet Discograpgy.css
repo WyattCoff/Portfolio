@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+/* CSS Document */ 
+
+.container {
+
+	width:100%;
+	min-width:auto;
+    margin:0%;
+	height: 250em;
+	background-color: #2A447F;
+	
+	
+
+}
+
+
+ 
+
+header {
+
+	background-color: lightgrey;
+	width:100%;
+	height:60px;
+	font-size:50px;
+	text-align: left;
+	border: outset;
+	border-color: white;
+	border-bottom-style: solid;
+	border-bottom-width: thick;
+
+               
+
+}
+
+ 
+
+nav {
+
+	width:20%;
+	height: 168.75em;
+	float:left;
+	background-color: #2A447F;
+	
+}
+
+ 
+
+section {
+
+	width:80%;
+	height:135em;
+    float:left;
+	font-size:20px;
+	text-align:center;
+	background-color: #2A447F;
+}
+
+ 
+
+.The_heading_container {
+
+	background-color:#FFFFFF;
+	width:100%;
+	height:75px;
+	font-size:50px;
+	text-align: left;
+}
+
+.Jimmy_Carr_Name_Left
+
+{
+
+	margin-top: 0%;
+	margin-bottom:30%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	color: #1D3365
+	
+
+}
+
+ 
+
+.Home_Bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	
+
+}
+
+ 
+
+.Biography_Bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	
+}
+
+.Discography_bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	
+}
+
+.Media_Bar
+
+{
+	margin-top: 0%;
+	margin-bottom:5%;
+	margin-left: 0%;
+	margin-right:5%;
+	font-size: 3vw;
+	text-align: left;
+	
+}
+
+p{
+	
+	font-size: 1.5vw; 
+	height: auto;
+	max-width: 100%;
+	margin: auto;
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	text-align: left;
+	
+	
+	
+}
+
+p.Main_page_Jimmy_Carr_Paragraph:first-letter {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Satisfy', cursive;
+	
+	
+	
+	
+}
+
+
+.Nav_Images {
+	
+	width: 90%;
+	height: auto;
+	float: left;
+}
+
+.comady_specials_main_text {
+	
+	font-size: 4vw;
+	color: #FF0000;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	
+}
+
+.discograpgy_table_container{
+	
+	font-size: 1vw; 
+	height: auto;
+	max-width: 60em;
+	margin: auto;
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	text-align: left;
+	
+}
+.collom_discriptions {
+	
+	background: #C9AF00;
+	font-size: 1vw; 
+	height: auto;
+	max-width: 100%;
+	margin: auto;
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	text-align: left;
+	
+}
+
+.Table_infomation_colloms{
+	
+	background: #E5BBBB;
+	font-size: 1em;
+	width: 50%;
+	
+}
+
+.table_images{
+	
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.Cover_length_changes {
+	
+	padding: 2px;
+	width: 20%;
+	height: auto;
+	
+}
+
+td {
+	text-align: center;
+	width: auto;
+}

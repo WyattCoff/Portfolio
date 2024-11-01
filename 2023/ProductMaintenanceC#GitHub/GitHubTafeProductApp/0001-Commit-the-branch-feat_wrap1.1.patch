@@ -1,0 +1,78 @@
+From 5706a789fd9cae18bb6ca88c3776f688d645c33c Mon Sep 17 00:00:00 2001
+From: 001192251 <wyatt.coff@student.tafesa.edu.au>
+Date: Fri, 15 Sep 2023 10:54:50 +0930
+Subject: [PATCH 1/2] Commit the branch feat_wrap1.1
+
+---
+ ProductMaintenance/ProductApps/MainWindow.xaml    |  4 +++-
+ ProductMaintenance/ProductApps/MainWindow.xaml.cs | 15 ++++++++++-----
+ 2 files changed, 13 insertions(+), 6 deletions(-)
+
+diff --git a/ProductMaintenance/ProductApps/MainWindow.xaml b/ProductMaintenance/ProductApps/MainWindow.xaml
+index c0843fe..0b647ce 100644
+--- a/ProductMaintenance/ProductApps/MainWindow.xaml
++++ b/ProductMaintenance/ProductApps/MainWindow.xaml
+@@ -12,10 +12,12 @@
+         <TextBox Name="priceTextBox" HorizontalAlignment="Left" Height="24" Margin="122,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
+         <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Height="24" Margin="122,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
+         <Button Name="calculateButton" Content="_Calculate" HorizontalAlignment="Left" Height="37" Margin="327,152,0,0" VerticalAlignment="Top" Width="122" Click="calculateButton_Click"/>
+-        <TextBlock x:Name="totalChargeTextBox" HorizontalAlignment="Left" Margin="46,209,0,53" Width="142" Height="NaN"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the delivery charge ($25):"/></TextBlock>
++        <TextBlock x:Name="totalChargeTextBox" HorizontalAlignment="Left" Margin="46,209,0,54" Width="142" Height="NaN"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the delivery charge ($25):"/></TextBlock>
+         <TextBox x:Name="totalChargeTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
+         <Button Name="clearButton" Content="C_lear" HorizontalAlignment="Left" Height="34" Margin="327,209,0,0" VerticalAlignment="Top" Width="122" Click="clearButton_Click"/>
+         <Button Name="closeButton" Content="Cl_ose" HorizontalAlignment="Left" Height="34" Margin="327,264,0,0" VerticalAlignment="Top" Width="122" Click="closeButton_Click"/>
++        <TextBlock x:Name="totalChargeafterwrap" HorizontalAlignment="Left" Margin="46,258,0,10" Width="142" Height="NaN"><Run Text="Total Charge after adding"/><Run Text=" "/><LineBreak/><Run Text="the "/><Run Text="wrap charge"/><Run Text=" ($5):"/></TextBlock>
++        <TextBox x:Name="totalChargeWithWrapTextBlock" HorizontalAlignment="Left" Height="24" Margin="193,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114" IsReadOnly="True"/>
+ 
+ 
+ 
+diff --git a/ProductMaintenance/ProductApps/MainWindow.xaml.cs b/ProductMaintenance/ProductApps/MainWindow.xaml.cs
+index a4a3cda..a0b7228 100644
+--- a/ProductMaintenance/ProductApps/MainWindow.xaml.cs
++++ b/ProductMaintenance/ProductApps/MainWindow.xaml.cs
+@@ -21,7 +21,8 @@ namespace ProductApps
+     public partial class MainWindow : Window
+     {
+         Product cProduct;
+-        decimal deliveryCharge = 25.00M; // Delivery charge
++        decimal deliveryCharge = 25.00M; // Existing Delivery charge
++        decimal wrappingCharge = 5.00M;  // New: Wrapping charge
+ 
+         public MainWindow()
+         {
+@@ -36,9 +37,13 @@ namespace ProductApps
+                 cProduct.calTotalPayment();
+                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
+ 
+-                // New: Calculate and display Total Charge after adding the delivery charge
++                // Calculate and display Total Charge after adding the delivery charge
+                 decimal totalCharge = cProduct.TotalPayment + deliveryCharge;
+                 totalChargeTextBlock.Text = Convert.ToString(totalCharge);
++
++                // New: Calculate and display Total Charge after adding the wrapping charge
++                decimal totalChargeWithWrap = cProduct.TotalPayment + deliveryCharge + wrappingCharge;
++                totalChargeWithWrapTextBlock.Text = Convert.ToString(totalChargeWithWrap);
+             }
+             catch (FormatException)
+             {
+@@ -52,7 +57,8 @@ namespace ProductApps
+             priceTextBox.Text = "";
+             quantityTextBox.Text = "";
+             totalPaymentTextBlock.Text = "";
+-            totalChargeTextBlock.Text = ""; // Clear the new TextBlock as well
++            totalChargeTextBlock.Text = ""; // Clear the existing TextBlock
++            totalChargeWithWrapTextBlock.Text = ""; // New: Clear the new TextBlock as well
+         }
+ 
+         private void closeButton_Click(object sender, RoutedEventArgs e)
+@@ -60,5 +66,4 @@ namespace ProductApps
+             this.Close();
+         }
+     }
+-}
+-
++}
+\ No newline at end of file
+-- 
+2.41.0.windows.3
+
